@@ -1,0 +1,134 @@
+<html>
+
+
+
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+.main{
+border:5px solid black;
+height:640px;
+width:500px;
+margin-left:500px;
+margin-top:100px;
+ border-radius: 15px;
+box-shadow:10px 10px 15px;
+background-color:black;
+
+}
+
+.number{
+display:flex;
+flex-wrap:wrap;
+height:50%;
+
+}
+.one{
+width:120px;
+height:120px;
+background-color:#175e57;
+color:white;
+margin:auto;
+margin-top:7px;
+ border-radius: 15px;
+ font-size:6vw;
+ text-align:center;
+ 
+}
+.a{
+width:200px;
+height:100px;
+font-size:2vw;
+border:10px solid black;
+margin-left:5px;
+
+ text-align:right; 
+ padding-right:20px;
+ background-color:#d0f5c6;
+}
+.one:hover{
+box-shadow:gray 8px 8px 7px;
+}
+.two{
+
+width:140px;
+height:100px;
+background-color:#175e57;
+color:white;
+margin:auto;
+margin-top:7px;
+ border-radius: 15px;
+ font-size:6vw;
+ text-align:center;
+}
+.two:hover{
+box-shadow:gray 8px 8px 7px;
+}
+
+
+</style>
+</head>
+<body>
+
+<div class="main">
+
+<input  class="a" type="text" id="aa"> 
+<button class="two" onclick="clss('.');">c</button>
+<button class="two" onclick="cls('.');"> del</button>
+
+<div class="number">
+<button class="one" onclick="get('7');">7 </button>
+<button class="one" onclick="get('8');">8 </button>
+<button class="one" onclick="get('9');"> 9</button>
+<button class="one" onclick="get('/');"> /</button>
+<button class="one" onclick="get('4');"> 4</button>
+<button class="one" onclick="get('5');"> 5</button>
+<button class="one" onclick="get('6');"> 6</button>
+<button class="one" onclick="get('*');"> X</button>
+<button class="one" onclick="get('1');"> 1</button>
+<button class="one" onclick="get('2');"> 2</button>
+<button class="one" onclick="get('3');"> 3</button>
+<button class="one" onclick="get('-');"> -</button>
+<button class="one" onclick="get('0');"> 0</button>
+<button class="one" onclick="get('.');">.</button>
+<button class="one" onclick="result('=');"> =</button>
+<button class="one" onclick="get('+');"> +</button>
+
+</div>
+</div>
+
+<script>
+function get(a)
+{
+let x;
+x=document.getElementById("aa");
+x.value=x.value+a;
+
+
+}
+
+function clss(a)
+{
+document.getElementById("aa").value=" ";
+}
+
+function result()
+{
+document.getElementById("aa").value=eval(document.getElementById("aa").value);
+}
+
+function cls()
+{
+y=document.getElementById("aa").value=Math.trunc(document.getElementById("aa").value/10);
+if(y==0)
+document.getElementById("aa").value=" ";
+}
+
+
+
+
+</script>
+
+</body>
+
+</html>
